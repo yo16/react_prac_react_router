@@ -1,5 +1,5 @@
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
-import { TopPage, Page1, Page2 } from "./pages";
+import { TopPage, Page1, Page2, PageNotFound } from "./pages";
 
 function App() {
     return (
@@ -12,6 +12,7 @@ function App() {
                     <Route path="/" element={<TopPage />} />
                     <Route path="/page1" element={<Page1 />} />
                     <Route path="/page2" element={<Page2 />} />
+                    <Route path="*" element={<PageNotFound />} />
                 </Routes>
             </main>
         </BrowserRouter>
